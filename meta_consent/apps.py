@@ -6,3 +6,9 @@ class AppConfig(DjangoAppConfig):
     verbose_name = "META Consent"
     include_in_administration_section = True
     has_exportable_data = True
+
+    def ready(self):
+        from .models.signals import (  # noqa
+            subject_consent_on_post_save,
+            subject_consent_on_post_delete,
+        )  # noqa
