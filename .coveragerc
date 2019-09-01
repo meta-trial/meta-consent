@@ -1,0 +1,4 @@
+[run]
+include = meta_consent/*
+omit = meta_consent/tests/*
+branch = 1
