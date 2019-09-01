@@ -41,8 +41,7 @@ class SubjectReconsent(
 
     action_name = RECONSENT_ACTION
 
-    site = models.ForeignKey(
-        Site, on_delete=models.PROTECT, null=True, editable=False)
+    site = models.ForeignKey(Site, on_delete=models.PROTECT, null=True, editable=False)
 
     report_datetime = models.DateTimeField(default=get_utcnow)
 
@@ -91,8 +90,7 @@ class SubjectReconsent(
     def get_subject_screening(self):
         """Returns the subject screening model instance.
         """
-        rs = RegisteredSubject.objects.get(
-            subject_identifier=self.subject_identifier)
+        rs = RegisteredSubject.objects.get(subject_identifier=self.subject_identifier)
         model_cls = django_apps.get_model(self.subject_screening_model)
         return model_cls.objects.get(screening_identifier=rs.screening_identifier)
 

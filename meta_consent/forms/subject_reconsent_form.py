@@ -25,8 +25,7 @@ class SubjectReconsentForm(
                 identity=cleaned_data.get("identity"),
             )
         except ObjectDoesNotExist:
-            raise forms.ValidationError(
-                {"identity": "Identity number does not match."})
+            raise forms.ValidationError({"identity": "Identity number does not match."})
         return cleaned_data
 
     class Meta:

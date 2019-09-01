@@ -53,8 +53,7 @@ class SubjectReconsentAdmin(ModelAdminSubjectDashboardMixin, SimpleHistoryAdmin)
         url_name = url_names.get("subject_dashboard_url")
         try:
             return reverse(
-                url_name, kwargs=dict(
-                    subject_identifier=obj.subject_identifier)
+                url_name, kwargs=dict(subject_identifier=obj.subject_identifier)
             )
         except NoReverseMatch:
             return super().view_on_site(obj)
@@ -66,8 +65,7 @@ class SubjectReconsentAdmin(ModelAdminSubjectDashboardMixin, SimpleHistoryAdmin)
         obj = SubjectReconsent.objects.get(id=object_id)
         try:
             protected = [
-                SubjectVisit.objects.get(
-                    subject_identifier=obj.subject_identifier)
+                SubjectVisit.objects.get(subject_identifier=obj.subject_identifier)
             ]
         except ObjectDoesNotExist:
             protected = None
