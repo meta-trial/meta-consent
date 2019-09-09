@@ -9,6 +9,6 @@ class AppConfig(DjangoAppConfig):
 
     def ready(self):
         from .models.signals import (  # noqa
-            subject_consent_on_post_save,
-            subject_consent_on_post_delete,
+            subject_consent_on_post_save,  # noqa
+            subject_consent_on_post_delete,  # noqa
         )  # noqa
