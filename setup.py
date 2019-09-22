@@ -42,6 +42,10 @@ setup(
         'edc-offstudy',
         'edc-reportable',
         'edc-subject-dashboard',
+        "edc-randomization",
+        "meta-permissions",
+        "meta-screening",
+        "meta-subject",
     ],
     classifiers=[
         'Environment :: Web Environment',
