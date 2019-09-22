@@ -33,6 +33,8 @@ class SubjectReconsent(
     for those originally consented by next of kin.
     """
 
+    subject_identifier_cls = None
+
     subject_screening_model = "meta_screening.subjectscreening"
 
     subject_consent_model = "meta_consent.subjectconsent"

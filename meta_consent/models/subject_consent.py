@@ -17,6 +17,12 @@ from edc_sites.models import SiteModelMixin
 from edc_visit_tracking.managers import CurrentSiteManager
 
 from .model_mixins import SearchSlugModelMixin
+from edc_identifier.subject_identifier import SubjectIdentifier as BaseSubjectIdentifier
+
+
+class SubjectIdentifier(BaseSubjectIdentifier):
+    template = "{protocol_number}-{site_id}-{sequence}"
+    padding = 4
 
 
 class SubjectConsentManager(SearchSlugManager, models.Manager):
@@ -41,6 +47,8 @@ class SubjectConsent(
 
     """ A model completed by the user that captures the ICF.
     """
+
+    subject_identifier_cls = SubjectIdentifier
 
     subject_screening_model = "meta_screening.subjectscreening"
 
