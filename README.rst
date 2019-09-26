@@ -12,8 +12,8 @@ Consent classes and modules
 .. |travis| image:: https://travis-ci.com/meta-trial/meta-consent.svg?branch=develop
     :target: https://travis-ci.com/meta-trial/meta-consent
 
-.. |coverage| image:: https://coveralls.io/repos/github/meta-trial/meta-consent/badge.svg?branch=develop
-    :target: https://coveralls.io/github/meta-trial/meta-consent?branch=develop
+.. |codecov| image:: https://codecov.io/gh/meta-trial/meta-consent/branch/develop/graph/badge.svg
+  :target: https://codecov.io/gh/meta-trial/meta-consent
 
 .. |downloads| image:: https://pepy.tech/badge/meta-consent
     :target: https://pepy.tech/project/meta-consent
