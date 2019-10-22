@@ -5,9 +5,9 @@ from edc_sites.models import SiteProfile
 
 class AdminSite(DjangoAdminSite):
 
-    site_title = "META Consents"
-    site_header = "META Consents"
-    index_title = "META Consents"
+    site_title = "META: Consents"
+    site_header = "META: Consents"
+    index_title = "META: Consents"
     site_url = "/administration/"
 
     def each_context(self, request):
