@@ -9,6 +9,7 @@ from edc_consent.model_mixins import ConsentModelMixin
 from edc_constants.choices import YES_NO
 from edc_constants.constants import NOT_APPLICABLE, NO
 from edc_identifier.model_mixins import NonUniqueSubjectIdentifierModelMixin
+from edc_identifier.subject_identifier import SubjectIdentifier as BaseSubjectIdentifier
 from edc_model.models import BaseUuidModel
 from edc_model.models import HistoricalRecords
 from edc_registration.model_mixins import UpdatesOrCreatesRegistrationModelMixin
@@ -17,7 +18,6 @@ from edc_sites.models import SiteModelMixin
 from edc_visit_tracking.managers import CurrentSiteManager
 
 from .model_mixins import SearchSlugModelMixin
-from edc_identifier.subject_identifier import SubjectIdentifier as BaseSubjectIdentifier
 
 
 class SubjectIdentifier(BaseSubjectIdentifier):

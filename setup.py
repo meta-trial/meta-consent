@@ -43,7 +43,7 @@ setup(
         'edc-reportable',
         'edc-subject-dashboard',
         "edc-randomization",
-        "meta-permissions",
+        "meta-auth",
         "meta-screening",
         "meta-subject",
     ],
