@@ -78,7 +78,6 @@ class SubjectConsent(
     def save(self, *args, **kwargs):
         subject_screening = self.get_subject_screening()
         self.screening_datetime = subject_screening.report_datetime
-        self.gender = subject_screening.gender
         self.subject_type = "subject"
         self.citizen = NOT_APPLICABLE
         super().save(*args, **kwargs)
